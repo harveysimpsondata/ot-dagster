@@ -22,6 +22,7 @@ setup(
         "textblob",
         "tweepy",
         "wordcloud",
+        "pyarrow",
     ],
     extras_require={"dev": ["dagster-webserver", "pytest"]},
 )
