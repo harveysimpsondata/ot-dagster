@@ -8,7 +8,7 @@ setup(
         "dagster-cloud",
         "RUST",
         "cargo",
-        "duckdb",
+        "duckdb==0.8.1",
         "dagster_duckdb",
         "dagster_duckdb_pandas",
         "boto3",
