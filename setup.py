@@ -1,8 +1,8 @@
 from setuptools import find_packages, setup
 
 setup(
-    name="quickstart_etl",
-    packages=find_packages(exclude=["quickstart_etl_tests"]),
+    name="ot_publisher",
+    packages=find_packages(exclude=["ot_publisher_tests"]),
     install_requires=[
         "dagster",
         "dagster-cloud",
