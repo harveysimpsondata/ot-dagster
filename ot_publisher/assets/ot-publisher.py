@@ -17,18 +17,17 @@ def extract(context) -> List[dict]:
     duck = Duck().connectMD(MOTHERDUCK_TOKEN)
     duck_connection = duck.get_connection()
 
-    duck_block = duck.getMaxBlock()-1
-
     RPC = EthRPC(ONFINALITY_KEY)
 
     from_block = RPC.get_last_block50()-1
     latest_block = RPC.get_latest_block()-1
+    duck_block = duck.getMaxBlock() - 1
 
     context.log.info(f"The latest block number is: {latest_block+1}")
     context.log.info(f"The last 50 blocks are: {from_block+1}")
     context.log.info(f"The last block in DuckDB is: {duck_block+1}")
 
-    processed_events = RPC.get_processed_events(from_block, latest_block)
+    processed_events = RPC.get_processed_events(duck_block, latest_block)
 
     return processed_events
 
