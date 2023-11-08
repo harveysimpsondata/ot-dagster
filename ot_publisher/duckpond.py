@@ -67,7 +67,7 @@ class EthRPC:
     def __init__(self, ONFINALITY_KEY):
 
         self.ONFINALITY_KEY = ONFINALITY_KEY
-        self.w3 = Web3(Web3.HTTPProvider(f'https://origintrail.api.onfinality.io/rpc?apikey={ONFINALITY_KEY}'))
+        self.w3 = Web3(Web3.HTTPProvider(f'https://astrosat.origintrail.network'))
         self.contract_address = '0xB20F6F3B9176D4B284bA26b80833ff5bFe6db28F'
         self.abi = serviceAgreementABI
 
