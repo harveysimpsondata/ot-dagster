@@ -79,7 +79,7 @@ class EthRPC:
         get_last_block = self.w3.eth.block_number - 50
         return get_last_block
 
-    def get_logs_in_chunks(self, from_block, latest_block, chunk_size=10000):
+    def get_logs_in_chunks(self, from_block, latest_block, chunk_size=100):
         logs = []
         contract = self.w3.eth.contract(address=self.contract_address, abi=self.abi)
         for start_block in range(from_block, latest_block, chunk_size):
