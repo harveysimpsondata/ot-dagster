@@ -202,6 +202,7 @@ class Transform:
                         "TRANSACTION_HASH",
                         "BLOCK_HASH"])
 
+        df = df.unique(subset=['TRANSACTION_HASH'])
         return df
 
 
