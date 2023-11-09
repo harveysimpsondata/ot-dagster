@@ -9,7 +9,7 @@ SUBSCAN_KEY = os.getenv("SUBSCAN_KEY")
 MOTHERDUCK_KEY = os.getenv("MOTHERDUCK_TOKEN")
 ONFINALITY_KEY = os.getenv("ONFINALITY_KEY")
 MOTHERDUCK_TOKEN = os.getenv("MOTHERDUCK_TOKEN")
-MAX_WORKERS = 2  # adjust this based on your system's capabilities
+MAX_WORKERS = 1  # adjust this based on your system's capabilities
 
 
 @asset(group_name="test", compute_kind="RPC API")
