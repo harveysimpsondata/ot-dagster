@@ -27,7 +27,7 @@ def extract(context) -> List[dict]:
     context.log.info(f"The last 50 blocks are: {from_block+1}")
     context.log.info(f"The last block in DuckDB is: {duck_block+1}")
 
-    processed_events = RPC.get_processed_events(from_block, latest_block)
+    processed_events = RPC.get_processed_events(duck_block, latest_block)
 
     return processed_events
 
