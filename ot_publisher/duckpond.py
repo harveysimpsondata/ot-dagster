@@ -83,7 +83,7 @@ class EthRPC:
         logs = []
         contract = self.w3.eth.contract(address=self.contract_address, abi=self.abi)
         for start_block in range(from_block, latest_block, chunk_size):
-            end_block = min(start_block + chunk_size - 1, latest_block)
+            end_block = min(start_block + chunk_size, latest_block)
             logs.extend(contract.events.ServiceAgreementV1Created.get_logs(fromBlock=start_block, toBlock=end_block))
         return logs
 
