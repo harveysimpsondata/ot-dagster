@@ -76,7 +76,7 @@ class EthRPC:
         return latest_block
 
     def get_last_block500(self):
-        get_last_block = self.w3.eth.block_number - 500
+        get_last_block = self.w3.eth.block_number - 2000
         return get_last_block
 
     def get_logs_in_chunks(self, from_block, latest_block, chunk_size=100):
