@@ -42,7 +42,10 @@ def transformDF(context: AssetExecutionContext, extract: List[dict]) -> pl.DataF
 def load(context: AssetExecutionContext, transformDF: pl.DataFrame):
     duck = Duck().connectMD(MOTHERDUCK_TOKEN)
     duck_connection = duck.get_connection()
-    context.log.info(f"MotherDuck connection: {duck_connection}")
+    context.log.info(f"MotherDuck connection: {print(duck_connection)}")
     duck.load_to_motherduck(transformDF)
+
+    df_length = transformDF.height
+    context.log.info(f"Inserted {df_length} rows into the Duck Nest!")
 
 
